@@ -1,6 +1,6 @@
 # eth_header_dissector
 
-##1. 캡처한 파일을 capture.pcap로 저장한다.
+## 1. 캡처한 파일을 capture.pcap로 저장한다.
 
 2. key.txt파일을 생성한다.(기존 파일이 있다면 내용을 지우고 자신의 key를 입력해둔다)
 
