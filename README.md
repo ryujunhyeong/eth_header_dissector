@@ -2,7 +2,7 @@
 
 ## 1. 캡처한 파일을 capture.pcap로 저장한다.
 
-2. key.txt파일을 생성한다.(기존 파일이 있다면 내용을 지우고 자신의 key를 입력해둔다)
+## 2. key.txt파일을 생성한다.(기존 파일이 있다면 내용을 지우고 자신의 key를 입력해둔다)
 
 ※자신의 key 찾는법
 	터미널에 sudo docker exec -it ethereum-node geth attach 입력해서 geth console open
@@ -11,13 +11,13 @@
 
 	노드 id는 [:16]만큼 잘라서 key로 사용한다.
 
-3. ethereum_dissector.cpp -> -lpcap -lssl -lcrypto를 포함해서 실행하기 ( g++ ethereum_dissector.cpp -lpcap -lssl -lcrypto -o dissector)
+## 3. ethereum_dissector.cpp -> -lpcap -lssl -lcrypto를 포함해서 실행하기 ( g++ ethereum_dissector.cpp -lpcap -lssl -lcrypto -o dissector)
 
-4. ./dissector
+## 4. ./dissector
 
-5. ethereum.lua 파일을 적절한 위치에 둔다.
+## 5. ethereum.lua 파일을 적절한 위치에 둔다.
 
-6. Wireshark init.lua 파일 맨 하단에 ethereum.lua 파일 위치를 입력한다.
+## 6. Wireshark init.lua 파일 맨 하단에 ethereum.lua 파일 위치를 입력한다.
 ※ 운영체제 별 init.lua 파일 위치 
 	Linux: /usr/share/wireshark
 	Window: C:\Program Files\Wireshark
@@ -31,12 +31,12 @@
 ※ Linux: dofile("usr/share/wireshark/ethereum.lua")
 ※ window: dofile("C:\\Program Files\\vscode\\ethereum.lua")
 
-10. Wireshark 들어가서 Analyze >> Enabled Protocols >> 창에서 ethereum 검색하면 내가 넣은 해석기 있음 체크 후 확인
+## 7. Wireshark 들어가서 Analyze >> Enabled Protocols >> 창에서 ethereum 검색하면 내가 넣은 해석기 있음 체크 후 확인
 
-11. 이후 decode.pcap파일을 Wireshark를 통해 보면 해석이 된 결과를 볼 수 있다.
+## 8. 이후 decode.pcap파일을 Wireshark를 통해 보면 해석이 된 결과를 볼 수 있다.
 
 < 사전 설치 필요 패키지 - 리눅스 기준 >
 
-1. sudo apt-get install libpcap-dev
+## 1. sudo apt-get install libpcap-dev
 	
-2. sudo apt install libss-dev
+## 2. sudo apt install libss-dev
